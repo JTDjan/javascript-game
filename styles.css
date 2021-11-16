@@ -34,13 +34,32 @@ body #main-container #quiz-container #quiz-frame {
 }
 body #main-container #quiz-container #quiz-frame #quiz-display {
   border: 1px solid thick greenyellow;
+  background-color: white;
   height: 50vh;
   width: 80%;
-  background-color: white;
 }
 body #main-container #quiz-container #quiz-frame #quiz-answers {
   border: 1px solid thick greenyellow;
+  background-color: white;
   height: 50vh;
   width: 80%;
-  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .userChoice:first-child {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .userChoice:nth-child(2) {
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .userChoice:nth-child(3) {
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .userChoice:last-child {
+  grid-column: 2/4;
+  grid-row: 5/6;
 }

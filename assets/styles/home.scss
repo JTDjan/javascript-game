@@ -33,19 +33,43 @@ body {
 
             #quiz-display{
               border: 1px solid thick greenyellow;
+              background-color: white;
               height: 50vh;
               width: 80%;
-              background-color: white;
 
             }
 
             #quiz-answers{
               border: 1px solid thick greenyellow;
+              background-color: white;
               height: 50vh;
               width: 80%;
-              background-color: white;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+              
+              .userChoice:first-child {
+                grid-column: 2 / 4 ;
+                grid-row: 2 / 3 ;
+              }
+
+              .userChoice:nth-child(2) {
+                grid-column: 2 / 4 ;
+                grid-row: 3 / 4 ;
+              }
+              .userChoice:nth-child(3) {
+                grid-column: 2 / 4 ;
+                grid-row: 4 / 5 ;
+              }
+              .userChoice:last-child {
+                grid-column: 2 / 4 ;
+                grid-row: 5 / 6 ;
+              }
+            
             }            
           }
         }      
   }
 }
+
+
