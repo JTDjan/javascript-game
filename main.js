@@ -36,22 +36,40 @@ questionArr = [
   } ,
 
   {
-    question: "What is the capital of Cuba?",
-    rightAnswer : "Havana",
-    wrongAnswer1 : "Kula Lumpur",
-    wrongAnswer2 : "Vara",
-    wrongAnswer3 : "Sucre",
+    question: "What year did Deathly Hallows Part 2?",
+    rightAnswer : "2011",
+    wrongAnswer1 : "2010",
+    wrongAnswer2 : "2012",
+    wrongAnswer3 : "2009",
 
   } ,
 
   {
-    question: "Who won the world cup in 2018?",
-    rightAnswer : "France",
-    wrongAnswer1 : "Brazil",
-    wrongAnswer2 : "Spain",
-    wrongAnswer3 : "Germany",
+    question: "What was the name of the actor that played Albus Dumbledore from year 3 to 8?",
+    rightAnswer : "Michael Gambon",
+    wrongAnswer1 : "Richard Harris",
+    wrongAnswer2 : "Jude Law",
+    wrongAnswer3 : "Toby Regbo",
 
-  }
+  },
+
+  {
+  question: "What is the killing curse in Harry Potter Universe?",
+    rightAnswer : "Avada Kedavra",
+    wrongAnswer1 : "Crucio",
+    wrongAnswer2 : "Imperio",
+    wrongAnswer3 : "Sectumsempra",
+
+  },
+
+  {
+    question: "How many staircases are in Hogwarts?",
+      rightAnswer : "142",
+      wrongAnswer1 : "97",
+      wrongAnswer2 : "694",
+      wrongAnswer3 : "183",
+  
+    },
 
 ]
 
