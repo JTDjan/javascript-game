@@ -40,9 +40,19 @@ questionArr = [
     rightAnswer : "Havana",
     wrongAnswer1 : "Kula Lumpur",
     wrongAnswer2 : "Vara",
-    wrongAnswer3 : "2002",
+    wrongAnswer3 : "Sucre",
+
+  } ,
+
+  {
+    question: "Who won the world cup in 2018?",
+    rightAnswer : "France",
+    wrongAnswer1 : "Brazil",
+    wrongAnswer2 : "Spain",
+    wrongAnswer3 : "Germany",
 
   }
+
 ]
 
 
@@ -50,22 +60,65 @@ questionArr = [
 
 // Display question & it related image on screen 
 const questionToDisplayArr = []
-const correctAnswer = []
+const correctAnswerArr = []
 
  for (let i = 0; i < questionArr.length ; i++){
     questionToDisplayArr.push(questionArr[i].question);
-  // to show my question in the display screen
-  // quizQuestion.innerHTML = questionArr[i].question;
- }
-
- console.log(questionToDisplayArr);
-
+    // to show my question in the display screen
+    // quizQuestion.innerHTML = questionArr[i].question;
+  }
+  
+  console.log(correctAnswerArr);
+  
+  
+  
+  
+  quizQuestion.innerHTML = questionArr[0].question
+  
+  
+  // Validate the user choice is correct. 
+  // event listener on buttons to take in the user choice & compare it to the right answer array.
+  
+  // display selection of answer within my buttons
  
+  
+  // for loop method
+  // for (let i = 0; i < userBtn.length; i++){
+
+    // userBtn[0].innerHTML = questionArr[0].rightAnswer
+    // userBtn[1].innerHTML = questionArr[0].wrongAnswer1
+
+  // }
 
 
- quizQuestion.innerHTML = questionToDisplayArr[0]
+  userBtn[0].innerHTML = questionArr[0].rightAnswer
+  userBtn[1].innerHTML = questionArr[0].wrongAnswer1
+  userBtn[2].innerHTML = questionArr[0].wrongAnswer2
+  userBtn[3].innerHTML = questionArr[0].wrongAnswer3
 
+  
+  for (i = 0; i < userBtn.length; i++){
+   const button = userBtn[i]
+     button.addEventListener("click", ()=>{
+      let buttonValue = button.innerHTML;
+        if (buttonValue  === questionArr[0].rightAnswer) {
+       return alert("You're Right!!!")
+      } else {
+        return alert("Sorry you're wrong move to the next question");
+      }
 
-// Validate the user choice is correct. 
-// event lister on buttons to take in the user choice 7 compare it to the right answer array.
+     }) 
+  }
+
+  // Next question Button 
+
+  nextQuestion.addEventListener("click", () => {
+    //question change
+    quizQuestion.innerHTML = questionArr[2].question
+    //changing selection of answers
+    userBtn[0].innerHTML = questionArr[2].rightAnswer
+    userBtn[1].innerHTML = questionArr[2].wrongAnswer1
+    userBtn[2].innerHTML = questionArr[2].wrongAnswer2
+    userBtn[3].innerHTML = questionArr[2].wrongAnswer3
+  })
 
