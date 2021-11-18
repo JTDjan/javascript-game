@@ -114,11 +114,19 @@ const correctAnswerArr = []
 
   nextQuestion.addEventListener("click", () => {
     //question change
-    quizQuestion.innerHTML = questionArr[2].question
+    quizQuestion.innerHTML = questionArr[1].question
+
     //changing selection of answers
-    userBtn[0].innerHTML = questionArr[2].rightAnswer
-    userBtn[1].innerHTML = questionArr[2].wrongAnswer1
-    userBtn[2].innerHTML = questionArr[2].wrongAnswer2
-    userBtn[3].innerHTML = questionArr[2].wrongAnswer3
+    userBtn[0].innerHTML = questionArr[1].rightAnswer
+    userBtn[1].innerHTML = questionArr[1].wrongAnswer1
+    userBtn[2].innerHTML = questionArr[1].wrongAnswer2
+    userBtn[3].innerHTML = questionArr[1].wrongAnswer3
   })
+
+// Reset button 
+const handleResetGame = () => {
+  document.location.reload();
+}
+
+reset.addEventListener ("click",handleResetGame)
 
