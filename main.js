@@ -25,7 +25,7 @@ const nextQuestion = document.getElementById("next-question-btn")
 
 // Questions database - created with array / array of objects containing keys of: Questions & Multiple answer
 
-questionArr = [
+const questionArr = [
   {
     question: "What year did the first Harry Potter film release?",
     rightAnswer : "2001",
@@ -36,7 +36,7 @@ questionArr = [
   } ,
 
   {
-    question: "What year did Deathly Hallows Part 2?",
+    question: "What year did Deathly Hallows Part 2 relase?",
     rightAnswer : "2011",
     wrongAnswer1 : "2010",
     wrongAnswer2 : "2012",
@@ -73,78 +73,64 @@ questionArr = [
 
 ]
 
+let currentRound; 
+let isUserBtn;
 
-
-
-// Display question & it related image on screen 
-const questionToDisplayArr = []
-const correctAnswerArr = []
-
- for (let i = 0; i < questionArr.length ; i++){
-    questionToDisplayArr.push(questionArr[i].question);
-    // to show my question in the display screen
-    // quizQuestion.innerHTML = questionArr[i].question;
+for (let i = 0; i < questionArr.length; i++){
+  currentRound = i 
+  //question change
+  quizQuestion.innerHTML = questionArr[i].question
+  
+    //changing selection of answers
+    userBtn[0].innerHTML = questionArr[i].rightAnswer
+    userBtn[1].innerHTML = questionArr[i].wrongAnswer1
+    userBtn[2].innerHTML = questionArr[i].wrongAnswer2
+    userBtn[3].innerHTML = questionArr[i].wrongAnswer3
+    let checkIfUserButton = setInterval(() => {
+      console.log("loop")
+      }
+    }, 1000) 
   }
-  
-  console.log(correctAnswerArr);
-  
-  
-  
-  
-  quizQuestion.innerHTML = questionArr[0].question
-  
-  
-  // Validate the user choice is correct. 
-  // event listener on buttons to take in the user choice & compare it to the right answer array.
-  
-  // display selection of answer within my buttons
+
+    
+    // Add delay to wait for user choice/ timer - add interval to pause user choice. 
+    //  checkUserChoice() =>{
+    //    if (isUserBtn === true){
+    //       setInterval(() => {
+            
+    //       }, 10000ms);
+    //    } else 
+    //  }
  
   
-  // for loop method
-  // for (let i = 0; i < userBtn.length; i++){
-
-    // userBtn[0].innerHTML = questionArr[0].rightAnswer
-    // userBtn[1].innerHTML = questionArr[0].wrongAnswer1
-
+  // const checkUserChoice = () => {
+    
   // }
+  // // Next question Button 
+  // nextQuestion.addEventListener("click", () => {
+        
+  //   })
 
+    
+    
+    // user buttons 
+    for (i = 0; i < userBtn.length; i++){
+      const button = userBtn[i]
+      button.addEventListener("click", ()=>{
+        isUserBtn = true
 
-  userBtn[0].innerHTML = questionArr[0].rightAnswer
-  userBtn[1].innerHTML = questionArr[0].wrongAnswer1
-  userBtn[2].innerHTML = questionArr[0].wrongAnswer2
-  userBtn[3].innerHTML = questionArr[0].wrongAnswer3
-
-  
-  for (i = 0; i < userBtn.length; i++){
-   const button = userBtn[i]
-     button.addEventListener("click", ()=>{
-      let buttonValue = button.innerHTML;
-        if (buttonValue  === questionArr[0].rightAnswer) {
-       return alert("You're Right!!!")
-      } else {
-        return alert("Sorry you're wrong move to the next question");
-      }
-
-     }) 
-  }
-
-  // Next question Button 
-
-  nextQuestion.addEventListener("click", () => {
-    //question change
-    quizQuestion.innerHTML = questionArr[1].question
-
-    //changing selection of answers
-    userBtn[0].innerHTML = questionArr[1].rightAnswer
-    userBtn[1].innerHTML = questionArr[1].wrongAnswer1
-    userBtn[2].innerHTML = questionArr[1].wrongAnswer2
-    userBtn[3].innerHTML = questionArr[1].wrongAnswer3
-  })
-
-// Reset button 
-const handleResetGame = () => {
-  document.location.reload();
-}
-
-reset.addEventListener ("click",handleResetGame)
-
+        let buttonValue = button.innerHTML;
+        if (buttonValue  === questionArr[i].rightAnswer) {
+          return alert("You're Right!!!")
+        } else {
+          return alert("Sorry you're wrong move to the next question");
+        }
+        
+      }) 
+    }
+    
+    // Reset button 
+    const handleResetGame = () => {
+      document.location.reload();
+    }
+      reset.addEventListener ("click",handleResetGame)

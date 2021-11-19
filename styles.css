@@ -27,7 +27,7 @@ body #main-container #quiz-container {
 body #main-container #quiz-container #quiz-frame {
   height: 85vh;
   width: 60vw;
-  background-color: red;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +47,8 @@ body #main-container #quiz-container #quiz-frame #quiz-display #quiz-image img {
   width: 100%;
   height: 250px;
   border: 1px solid black;
+  border-bottom-left-radius: 17px;
+  border-end-end-radius: 17px;
 }
 body #main-container #quiz-container #quiz-frame #quiz-display #quiz-question {
   text-align: center;
