@@ -15,6 +15,9 @@ const imageDisplay = document.querySelector('#quiz-image');
 
 const quizQuestion = document.querySelector("#quiz-question")
 
+const scoreCard = document.querySelector("#score")
+
+
 const userBtn = document.querySelectorAll(".userChoice");
 
 const reset = document.querySelector('#resetBtn');
@@ -73,63 +76,45 @@ const questionArr = [
 
 ]
 
-let currentRound; 
+let currentRound = 0;
 let isUserBtn;
-
-for (let i = 0; i < questionArr.length; i++){
-  currentRound = i 
+let score = 0;
+const getNewRound = (currentRound) => {
   //question change
-  quizQuestion.innerHTML = questionArr[i].question
+  quizQuestion.innerHTML = questionArr[currentRound].question
+      scoreCard.innerHTML = `${score}`
   
+
     //changing selection of answers
-    userBtn[0].innerHTML = questionArr[i].rightAnswer
-    userBtn[1].innerHTML = questionArr[i].wrongAnswer1
-    userBtn[2].innerHTML = questionArr[i].wrongAnswer2
-    userBtn[3].innerHTML = questionArr[i].wrongAnswer3
-    let checkIfUserButton = setInterval(() => {
-      console.log("loop")
-      }
-    }, 1000) 
-  }
 
-    
-    // Add delay to wait for user choice/ timer - add interval to pause user choice. 
-    //  checkUserChoice() =>{
-    //    if (isUserBtn === true){
-    //       setInterval(() => {
-            
-    //       }, 10000ms);
-    //    } else 
-    //  }
- 
-  
-  // const checkUserChoice = () => {
-    
-  // }
-  // // Next question Button 
-  // nextQuestion.addEventListener("click", () => {
-        
-  //   })
-
-    
-    
-    // user buttons 
+    // try to randomanize the usserBTn index numbers within the function. 
+    userBtn[0].innerHTML = questionArr[currentRound].rightAnswer
+    userBtn[1].innerHTML = questionArr[currentRound].wrongAnswer1
+    userBtn[2].innerHTML = questionArr[currentRound].wrongAnswer2
+    userBtn[3].innerHTML = questionArr[currentRound].wrongAnswer3
+}
+    // user buttons
     for (i = 0; i < userBtn.length; i++){
       const button = userBtn[i]
       button.addEventListener("click", ()=>{
-        isUserBtn = true
-
         let buttonValue = button.innerHTML;
-        if (buttonValue  === questionArr[i].rightAnswer) {
-          return alert("You're Right!!!")
+        if (buttonValue  === questionArr[currentRound].rightAnswer) {
+          score = score + 1;   
+          console.log(score);
+          scoreCard.innerHTML = `${score}`
+          return alert("You’re Right!!!")
         } else {
-          return alert("Sorry you're wrong move to the next question");
+          return alert("Sorry you’re wrong move to the next question");
         }
-        
-      }) 
+      })
     }
-    
-    // Reset button 
+    nextQuestion.addEventListener("click", () => {
+    currentRound = currentRound + 1
+    getNewRound(currentRound)
+    })
+
+
+    // Reset button
     const handleResetGame = () => {
       document.location.reload();
     }
