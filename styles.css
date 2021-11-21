@@ -56,6 +56,9 @@ body #main-container #quiz-container #quiz-frame #quiz-display #quiz-question {
 body #main-container #quiz-container #quiz-frame #quiz-display #quiz-question h2 {
   font-size: 11px;
 }
+body #main-container #quiz-container #quiz-frame #quiz-display #score {
+  text-align: center;
+}
 body #main-container #quiz-container #quiz-frame #quiz-answers {
   border: 1px solid thick greenyellow;
   background-color: white;

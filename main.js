@@ -7,7 +7,8 @@
 
 // a timer to answer the question. at which point when it ends, the user can't select an answer
 
-
+//importing questions 
+import {question} from "./assets/questions/questions.js";
 
 // link selected HTML elements to java script using queryselects / getElementbyID 
 
@@ -35,6 +36,7 @@ const questionArr = [
     wrongAnswer1 : "2000",
     wrongAnswer2 : "1997",
     wrongAnswer3 : "2002",
+    image: "./assets/images/stone.jpg",
 
   } ,
 
@@ -44,6 +46,7 @@ const questionArr = [
     wrongAnswer1 : "2010",
     wrongAnswer2 : "2012",
     wrongAnswer3 : "2009",
+    image: "./assets/images/DeathlyHallowsPt2.jpeg",
 
   } ,
 
@@ -53,6 +56,7 @@ const questionArr = [
     wrongAnswer1 : "Richard Harris",
     wrongAnswer2 : "Jude Law",
     wrongAnswer3 : "Toby Regbo",
+    image: "./assets/images/dumbledore.jpeg",
 
   },
 
@@ -62,6 +66,7 @@ const questionArr = [
     wrongAnswer1 : "Crucio",
     wrongAnswer2 : "Imperio",
     wrongAnswer3 : "Sectumsempra",
+    image: "./assets/images/spells.jpeg",
 
   },
 
@@ -71,8 +76,61 @@ const questionArr = [
       wrongAnswer1 : "97",
       wrongAnswer2 : "694",
       wrongAnswer3 : "183",
+      image: "./assets/images/staircase.jpeg",
   
     },
+
+    {
+      question: "Which class has a different teacher every year?",
+        rightAnswer : " Defence against the dark arts",
+        wrongAnswer1 : "Herbology",
+        wrongAnswer2 : "Potions",
+        wrongAnswer3 : "Care of Magical Creaturesless",
+        image: "./assets/images/lesson.jpeg",
+    
+      },
+
+      {
+        question: "Who was flying with Mad Eye Moody when he died?",
+          rightAnswer : "Mundungus Fletcher",
+          wrongAnswer1 : "Kingsley Shacklebolt",
+          wrongAnswer2 : "Remus Lupin",
+          wrongAnswer3 : "Fred Wealsey",
+          image: "./assets/images/madEyeMoody.jpeg",
+      
+        },
+
+
+        {
+          question: " What is Tom Riddle’s middle name?",
+            rightAnswer : " Marvolo",
+            wrongAnswer1 : "Avalovo",
+            wrongAnswer2 : "Marolo",
+            wrongAnswer3 : "Amarolo",
+            image: "./assets/images/Voldemort.jpeg",
+        
+          },
+
+
+          {
+            question: " What is Snape’s Patronus?",
+              rightAnswer : "Doe",
+              wrongAnswer1 : "Deer",
+              wrongAnswer2 : "Stag",
+              wrongAnswer3 : "Fox",
+              image: "./assets/images/patronus.jpeg",
+          
+            },
+
+            {
+              question: " What is the name of the potion which can change a person's appearance into that of someone else?",
+                rightAnswer : "Polyjuice potion",
+                wrongAnswer1 : "Girding Potion",
+                wrongAnswer2 : "Felix Felicis",
+                wrongAnswer3 : "Oculus Potion",
+                image: "./assets/images/PotionsClassroom_lab.jpeg",
+            
+              },
 
 ]
 
@@ -83,11 +141,14 @@ const getNewRound = (currentRound) => {
   //question change
   quizQuestion.innerHTML = questionArr[currentRound].question
       scoreCard.innerHTML = `${score}`
-  
+
+  // image display    
+      imageDisplay.innerHTML = questionArr[currentRound].image
 
     //changing selection of answers
 
-    // try to randomanize the usserBTn index numbers within the function. 
+    // try to randomanize the userBTn index numbers within the function?????(math.in)
+
     userBtn[0].innerHTML = questionArr[currentRound].rightAnswer
     userBtn[1].innerHTML = questionArr[currentRound].wrongAnswer1
     userBtn[2].innerHTML = questionArr[currentRound].wrongAnswer2
@@ -104,7 +165,7 @@ const getNewRound = (currentRound) => {
           scoreCard.innerHTML = `${score}`
           return alert("You’re Right!!!")
         } else {
-          return alert("Sorry you’re wrong move to the next question");
+          return alert("Wrong move to the next question");
         }
       })
     }
