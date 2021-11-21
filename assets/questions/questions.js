@@ -1,3 +1,4 @@
+// Questions database - created with array / array of objects containing keys of: Questions & Multiple answer
 export const questionArr = [
   {
     question: "What year did the first Harry Potter film release?",
@@ -5,7 +6,7 @@ export const questionArr = [
     wrongAnswer1 : "2000",
     wrongAnswer2 : "1997",
     wrongAnswer3 : "2002",
-    image: "./assets/images/stone.jpg",
+    image: './assets/images/stone.jpg',
 
   } ,
 
@@ -15,7 +16,7 @@ export const questionArr = [
     wrongAnswer1 : "2010",
     wrongAnswer2 : "2012",
     wrongAnswer3 : "2009",
-    image: "./assets/images/DeathlyHallowsPt2.jpeg",
+    image: './assets/images/DeathlyHallowsPt2.jpeg',
 
   } ,
 
@@ -25,7 +26,7 @@ export const questionArr = [
     wrongAnswer1 : "Richard Harris",
     wrongAnswer2 : "Jude Law",
     wrongAnswer3 : "Toby Regbo",
-    image: "./assets/images/dumbledore.jpeg",
+    image: './assets/images/dumbledore.jpeg',
 
   },
 
@@ -35,7 +36,7 @@ export const questionArr = [
     wrongAnswer1 : "Crucio",
     wrongAnswer2 : "Imperio",
     wrongAnswer3 : "Sectumsempra",
-    image: "./assets/images/spells.jpeg",
+    image: './assets/images/spells.jpeg',
 
   },
 
@@ -45,7 +46,7 @@ export const questionArr = [
       wrongAnswer1 : "97",
       wrongAnswer2 : "694",
       wrongAnswer3 : "183",
-      image: "./assets/images/staircase.jpeg",
+      image: './assets/images/staircase.jpeg',
   
     },
 
@@ -55,7 +56,7 @@ export const questionArr = [
         wrongAnswer1 : "Herbology",
         wrongAnswer2 : "Potions",
         wrongAnswer3 : "Care of Magical Creaturesless",
-        image: "./assets/images/lesson.jpeg",
+        image: './assets/images/lesson.jpeg',
     
       },
 
@@ -65,7 +66,7 @@ export const questionArr = [
           wrongAnswer1 : "Kingsley Shacklebolt",
           wrongAnswer2 : "Remus Lupin",
           wrongAnswer3 : "Fred Wealsey",
-          image: "./assets/images/madEyeMoody.jpeg",
+          image: './assets/images/madEyeMoody.jpeg',
       
         },
 
@@ -76,7 +77,7 @@ export const questionArr = [
             wrongAnswer1 : "Avalovo",
             wrongAnswer2 : "Marolo",
             wrongAnswer3 : "Amarolo",
-            image: "./assets/images/Voldemort.jpeg",
+            image: './assets/images/Voldemort.jpeg',
         
           },
 
@@ -87,7 +88,7 @@ export const questionArr = [
               wrongAnswer1 : "Deer",
               wrongAnswer2 : "Stag",
               wrongAnswer3 : "Fox",
-              image: "./assets/images/patronus.jpeg",
+              image: './assets/images/patronus.jpeg',
           
             },
 
@@ -97,7 +98,7 @@ export const questionArr = [
                 wrongAnswer1 : "Girding Potion",
                 wrongAnswer2 : "Felix Felicis",
                 wrongAnswer3 : "Oculus Potion",
-                image: "./assets/images/PotionsClassroom_lab.jpeg",
+                image: './assets/images/PotionsClassroom_lab.jpeg',
             
               }
 
