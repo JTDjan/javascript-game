@@ -73,6 +73,23 @@ body #main-container #quiz-container #quiz-frame #quiz-answers {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+body #main-container #quiz-container #quiz-frame #quiz-answers .answerBtn {
+  border-radius: 12px;
+  background-color: #e9f0ff;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .answerBtn:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .functionalityBtn {
+  border-radius: 4px;
+  background-color: #e9f0ff;
+  cursor: pointer;
+}
+body #main-container #quiz-container #quiz-frame #quiz-answers .functionalityBtn:hover {
+  background-color: whitesmoke;
+}
 body #main-container #quiz-container #quiz-frame #quiz-answers .userChoice:first-child {
   grid-column: 2/4;
   grid-row: 2/3;
