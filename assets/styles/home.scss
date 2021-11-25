@@ -73,6 +73,28 @@ body {
               grid-gap: 10px;
               grid-template-columns: 1fr 1fr 1fr 1fr;
               grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+              .answerBtn {
+                border-radius: 12px ;
+                background-color: #e9f0ff;
+            
+              }
+
+              .answerBtn:hover {
+                background-color: blue ;
+                color: white;
+                cursor: pointer;
+              }
+
+              .functionalityBtn {
+                border-radius: 4px;
+                background-color: #e9f0ff;
+                cursor: pointer;
+              }
+
+              .functionalityBtn:hover {
+                background-color: whitesmoke;
+              }
               
               .userChoice:first-child {
                 grid-column: 2 / 4 ;

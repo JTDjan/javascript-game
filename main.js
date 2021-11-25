@@ -5,6 +5,7 @@ import {questionArr} from "./assets/questions/questions.js";
 // link selected HTML elements to java script using queryselects / getElementbyID 
 
 const imageDisplay = document.querySelector('#quiz-image');
+const image = document.querySelector('#qImg');
 const quizQuestion = document.querySelector("#quiz-question")
 const scoreCard = document.querySelector("#score")
 const userBtn = document.querySelectorAll(".userChoice");
@@ -23,8 +24,7 @@ const getNewRound = (currentRound) => {
   scoreCard.innerHTML = `${score}/10`
   
   // image display    
-  let imgsrc = questionArr[currentRound].image;
-  imageDisplay.innerHTML = `<img src="imgsrc">`
+  image.src =  questionArr[currentRound].image
   console.log(imageDisplay);
   
   //changing selection of answers
@@ -50,9 +50,9 @@ for (let i = 0; i < userBtn.length; i++) {
       score = score + 1;   
       // console.log(score);
       scoreCard.innerHTML = `${score}/10`
-      return alert("You’re Right!!! Let's try the next question")
+      return alert("You’re Right!!! Let move onto the next question")
     } else {
-      return alert("Incorrect! Sorry move onto the next question");
+      return alert("Incorrect! Let try the next question");
     }
   })
 }
